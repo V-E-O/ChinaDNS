@@ -16,10 +16,6 @@ static int local_ns_labellen(const unsigned char *lp);
 #define LOCAL_NS_MSG_PTR _msg_ptr
 #endif
 
-#ifdef __MINGW32__
-#define EMSGSIZE WSAEMSGSIZE
-#endif
-
 int local_ns_initparse(const unsigned char *msg, int msglen, ns_msg *handle)
 {
 	const unsigned char *eom = msg + msglen;
