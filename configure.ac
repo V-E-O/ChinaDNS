@@ -19,8 +19,8 @@ AC_PROG_INSTALL
 # Add library for MinGW
 case $target_os in
   *mingw*)
-    LIBS+=" -lws2_32"
-    CFLAGS+=" -D_WIN32_WINNT=0x0501"
+    LIBS="$LIBS -lws2_32"
+    AC_DEFINE([_WIN32_WINNT], 0x0501, [Define to '0x0501' for Windows XP APIs.])
     ;;
   *)
     ;;
